@@ -31,8 +31,18 @@ with open("data\yjcaptions26k_clean.json", "r", encoding="utf-8") as f:
         # 説明文リストの追加
         captions[img_id] = caption
 
+f = codecs.open("caption.txt", "w", "utf-8")
+o = codecs.open("img_id.txt", "w", "utf-8")
+
 for k in images:
-    print(images[k])
-    exit()
-    with urllib.request.urlopen(images[k]) as res:
-        pass
+    try:
+        # 画像リンクアクセス
+        res = urllib.request.urlopen(images[k])
+    except urllib.error.HTTPError:
+        # レスポンスエラーの場合は次処理へ
+        continue
+
+    print(res.status)
+
+    # クローズ処理
+    res.close()

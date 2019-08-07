@@ -9,6 +9,9 @@ __pycache__/
 # dir
 data/
 
+# txt
+*.txt
+
 # Distribution / packaging
 .Python
 build/
