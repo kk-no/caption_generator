@@ -46,7 +46,7 @@ for image in images:
     res_body = res.read()
 
     # 画像保存
-    jpg = codecs.open(str(image) + ".jpg", "w")
+    jpg = codecs.open(str(image) + ".jpg", "w", "utf-8")
     jpg.buffer.write(res_body)
 
     # 説明文と画像IDを保存
@@ -54,6 +54,7 @@ for image in images:
     o.write(str(image) + "\n")
 
     # クローズ処理
+    jpg.close()
     res.close()
 
 # クローズ処理
