@@ -33,8 +33,8 @@ def main():
                 #         if j["id"] == img_id:
                 #             img = j["flickr_url"]
 
-            # 説明文リストの追加
-            captions[img_id] = caption
+                # 説明文リストの追加
+                captions[img_id] = caption
 
     f = codecs.open("data/caption.txt", "w", "utf-8")
     o = codecs.open("data/img_id.txt", "w", "utf-8")
