@@ -36,8 +36,8 @@ def main():
                 # 説明文リストの追加
                 captions[img_id] = caption
 
-    f = codecs.open("data/caption.txt", "w", "utf-8")
-    o = codecs.open("data/img_id.txt", "w", "utf-8")
+    f = codecs.open("data\caption.txt", "w", "utf-8")
+    o = codecs.open("data\img_id.txt", "w", "utf-8")
 
     for image in images:
         try:
@@ -51,7 +51,7 @@ def main():
         res_body = res.read()
 
         # 画像保存
-        jpg = codecs.open(str(image) + ".jpg", "w", "utf-8")
+        jpg = codecs.open("image\\" + str(image) + ".jpg", "w")
         jpg.buffer.write(res_body)
 
         # 説明文と画像IDを保存
