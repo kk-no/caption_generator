@@ -1,6 +1,6 @@
-import sys
-import json
 import codecs
+import json
+import sys
 import urllib.request
 
 

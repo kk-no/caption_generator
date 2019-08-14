@@ -8,6 +8,14 @@
 - Cuda 9.1
 - Cupy 6.2.0 (cupy-cuda91 6.2.0)
 
+## DataSet
+- yjcaptions26k_clean.json
+
+## 準備
+- dataディレクトリを作成し、yjcaptions26k_clean.jsonを格納
+- imageディレクトリを作成
+- preserve_image_caption.pyを実行
+
 ## TODO
 - 訓練データ用意(画像とキャプション)
 - 学習
