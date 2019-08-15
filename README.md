@@ -7,11 +7,13 @@
 - Chainer 5.3.0
 - Cuda 9.1
 - Cupy 6.2.0 (cupy-cuda91 6.2.0)
+- Mecab 0.996
 
 ## DataSet
 - yjcaptions26k_clean.json
 
 ## 準備
+- 形態素解析エンジンとしてMecabを使用
 - dataディレクトリを作成し、yjcaptions26k_clean.jsonを格納
 - imageディレクトリを作成
 - preserve_image_caption.pyを実行
