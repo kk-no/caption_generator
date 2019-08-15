@@ -25,4 +25,5 @@
 
 ## LINK
 - YJCaption https://github.com/yahoojapan/YJCaptions
-- CNN http://dl.caffe.berkeleyvision.org/bvlc_alexnet.caffemodel
+- Model Zoo https://github.com/BVLC/caffe/wiki/Model-Zoo
+- CNN(AlexNet) http://dl.caffe.berkeleyvision.org/bvlc_alexnet.caffemodel
