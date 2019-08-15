@@ -22,3 +22,7 @@
 - 訓練データ用意(画像とキャプション)
 - 学習
 - 新規画像の読込(部分)とキャプションの生成
+
+## LINK
+- YJCaption https://github.com/yahoojapan/YJCaptions
+- CNN http://dl.caffe.berkeleyvision.org/bvlc_alexnet.caffemodel
