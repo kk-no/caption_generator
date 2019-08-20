@@ -11,6 +11,9 @@ from chainer.training import extensions
 from chainer.links.caffe import CaffeFunction
 from PIL import Image
 
+# TODO: fix error
+# FileNotFoundError: [Errno 2] No such file or directory: '393445.jpg'
+
 # バッチサイズ
 batch_size = 10
 # GPUを使用
