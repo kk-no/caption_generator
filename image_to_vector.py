@@ -13,6 +13,7 @@ from PIL import Image
 
 # TODO: fix error
 # FileNotFoundError: [Errno 2] No such file or directory: '393445.jpg'
+# => try-catchでハンドリングする
 
 # バッチサイズ
 batch_size = 10
@@ -21,10 +22,13 @@ uses_device = 0
 
 # cupy使用チェック
 if uses_device >= 0:
+    # GPUを使用
     import cupy as cp
 else:
+    # CPUを使用
     cp = np
 
+# NN
 class ImageCaption_NN(chainer.Chain):
 
     def __init__(self, n_words, n_units):
