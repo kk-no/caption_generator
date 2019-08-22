@@ -17,15 +17,15 @@ def main():
             caption = i["caption"]
 
             # 解説文長による制限
-            if len(caption) < 16:
+            # if len(caption) < 16:
                 # 画像ID
-                img_id = i["image_id"]
-                if img_id not in images:
-                    # 画像のエントリを保存
-                    img = [j["flickr_url"] for j in jsons["images"] if j["id"] == img_id]
-                    if len(img) > 0:
-                        # 画像リストの追加
-                        images[img_id] = img[0]
+                # img_id = i["image_id"]
+                # if img_id not in images:
+                #     # 画像のエントリを保存
+                #     img = [j["flickr_url"] for j in jsons["images"] if j["id"] == img_id]
+                #     if len(img) > 0:
+                #         # 画像リストの追加
+                #         images[img_id] = img[0]
 
                 # 内包表記を使用しない場合
                 # if img_id not in images:
@@ -34,7 +34,20 @@ def main():
                 #             img = j["flickr_url"]
 
                 # 説明文リストの追加
-                captions[img_id] = caption
+                # captions[img_id] = caption
+
+            # 一部エラー(他のダウンロードは正常に行われる)
+            # 画像ID
+            img_id = i["image_id"]
+            if img_id not in images:
+                # 画像のエントリを保存
+                img = [j["flickr_url"] for j in jsons["images"] if j["id"] == img_id]
+                if len(img) > 0:
+                    # 画像リストの追加
+                    images[img_id] = img[0]
+
+            # 説明文リストの追加
+            captions[img_id] = caption
 
     f = codecs.open("data\caption.txt", "w", "utf-8")
     o = codecs.open("data\img_id.txt", "w", "utf-8")
