@@ -36,7 +36,7 @@ def main():
                 # 説明文リストの追加
                 # captions[img_id] = caption
 
-            # 一部エラー(他のダウンロードは正常に行われる)
+            # 一部FileNotFoundエラー(他のダウンロードは正常に行われる)
             # 画像ID
             img_id = i["image_id"]
             if img_id not in images:
