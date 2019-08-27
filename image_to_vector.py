@@ -62,6 +62,7 @@ class ImageCaption_NN(chainer.Chain):
         self.l2.reset_state()
         self.l3.reset_state()
 
+# Updater
 class ImageCaptionUpdater(training.StandardUpdater):
 
     def __init__(self, iter, optimizer, device):
