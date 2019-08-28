@@ -181,11 +181,16 @@ def main():
         # 行中の単語をリスト化
         l = line.strip().split(" ")
         # ファイル名を作成
-        file_name = img_id.strip() + ".jpg"
+        file_name = "image\\" + img_id.strip() + ".jpg"
         # デバッグ
         print(file_name)
-        # ファイルの読込
+        # ファイルの読込]
         img = Image.open(file_name).resize((400, 400)).convert("RGB")
+        # try:
+        #     Image.open(file_name).resize((400, 400)).convert("RGB")
+        # except FileNotFoundError:
+        #     continue
+
         # 画像ベクトルの配列
         vectors = []
         # 4辺+中央で計5枚の画像を作る
