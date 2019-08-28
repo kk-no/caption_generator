@@ -195,18 +195,25 @@ def main():
         vectors = []
         # 4辺+中央で計5枚の画像を作る
         for s in [
-                (0, 0, 227, 227),     # 左上
-                (173, 0, 400, 277),   # 右上
-                (0, 173, 227, 400),   # 左下
-                (173, 173, 400, 400), # 右下
-                (86, 86, 313, 313)    # 中央
-            ]:
+            (0, 0, 227, 227),     # 左上
+            (173, 0, 400, 277),   # 右上
+            (0, 173, 227, 400),   # 左下
+            (173, 173, 400, 400), # 右下
+            (86, 86, 313, 313)    # 中央
+        ]:
             # 画像から切り出し
             cropimg = img.crop(s)
             # 画素を数値データに変換
             pix = np.array(cropimg, dtype=np.float32)
             pix = (pix[::-1]).transpose(2, 0, 1)
             x = cp.array([pix], dtype=cp.float32)
+
+            # Debug
+            print(x.ndim)
+            print(x.shape)
+            print(x.size)
+            exit()
+
             # fc6層のデータを抽出
             e, = model(inputs={"data": x}, outputs=["fc6"], disable=["drop6"])
             # 画像ベクトルの配列に結果を格納
