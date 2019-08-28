@@ -212,7 +212,10 @@ def main():
             print(x.ndim)
             print(x.shape)
             print(x.size)
-            exit()
+
+            # TODO: Error
+            # Expect: x.shape[1] == W.shape[1]
+            # Actual: 12288 != 9216
 
             # fc6層のデータを抽出
             e, = model(inputs={"data": x}, outputs=["fc6"], disable=["drop6"])
