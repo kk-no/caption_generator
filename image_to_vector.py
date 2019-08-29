@@ -215,6 +215,7 @@ def main():
 
             # TODO: Error
             # Expect: x.shape[1] == W.shape[1]
+            # 読み込み2回目でエラー
             # Actual: 12288 != 9216
 
             # fc6層のデータを抽出
