@@ -186,10 +186,6 @@ def main():
         print(file_name)
         # ファイルの読込]
         img = Image.open(file_name).resize((400, 400)).convert("RGB")
-        # try:
-        #     Image.open(file_name).resize((400, 400)).convert("RGB")
-        # except FileNotFoundError:
-        #     continue
 
         # 画像ベクトルの配列
         vectors = []
