@@ -209,7 +209,7 @@ def main():
             print(x.shape)
             print(x.size)
 
-            # TODO: Error
+            # TODO: Error fix
             # Expect: x.shape[1] == W.shape[1]
             # 読み込み2回目でエラー(左側が次元数おかしい)
             # Actual: 12288 != 9216
