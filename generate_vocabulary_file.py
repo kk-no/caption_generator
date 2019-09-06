@@ -1,5 +1,6 @@
 import codecs
 
+# 分割したキャプションを読み込む
 
 def main():
     # 単語リスト
